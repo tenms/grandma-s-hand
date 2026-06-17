@@ -1,0 +1,1855 @@
+/* ==========================================================================
+   할머니손 (시골 먹거리와 장 만들기 체험) 프리미엄 스타일시트
+   Typography: 'Gowun Batang' (Serif) & 'Pretendard' (Sans-Serif)
+   ========================================================================== */
+
+/* 1. 기본 설정 및 초기화 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  background: radial-gradient(circle at 10% 10%, #fff9f2 0%, #fcf3e3 50%, #f6e8cd 100%);
+  background-attachment: fixed;
+  color: #3e3227;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, textarea, select {
+  font-family: inherit;
+  color: inherit;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 2. 레이아웃 컨테이너 */
+.page {
+  max-width: 1200px;
+  margin: 40px auto;
+  min-height: 100vh;
+  background: rgba(255, 254, 252, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 212, 187, 0.4);
+  border-radius: 40px;
+  box-shadow: 0 30px 70px rgba(72, 48, 28, 0.08);
+  overflow: hidden;
+}
+
+/* 3. 헤더 영역 */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  padding: 30px 40px;
+  background: rgba(255, 253, 247, 0.8);
+  border-bottom: 1px solid rgba(226, 212, 187, 0.4);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #609127, #8bb841);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-family: 'Gowun Batang', serif;
+  font-size: 28px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(96, 145, 39, 0.25);
+}
+
+.logo strong {
+  display: block;
+  font-family: 'Gowun Batang', serif;
+  font-size: 34px;
+  color: #3b2c1e;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.logo em {
+  display: block;
+  margin-top: 4px;
+  color: #63783a;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.admin-button, .call-button {
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.admin-button {
+  border: 1px solid rgba(215, 196, 159, 0.6);
+  background: rgba(255, 248, 232, 0.6);
+  color: #5d4630;
+}
+
+.admin-button:hover {
+  background: #fff3d6;
+  transform: translateY(-2px);
+}
+
+.call-button {
+  background: #4f3b25;
+  color: white;
+}
+
+.call-button:hover {
+  background: #3c2c1a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(79, 59, 37, 0.2);
+}
+
+/* 4. 히어로 섹션 */
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  padding: 60px 40px;
+  background: linear-gradient(90deg, rgba(255, 251, 243, 0.98) 30%, rgba(255, 251, 243, 0.7) 100%),
+              url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80") center/cover;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-label {
+  width: fit-content;
+  margin-bottom: 20px;
+  padding: 8px 18px;
+  border-radius: 100px;
+  background: #ebf5d6;
+  color: #4b7320;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.hero h1 {
+  font-family: 'Gowun Batang', serif;
+  margin-bottom: 22px;
+  font-size: 46px;
+  line-height: 1.3;
+  color: #271c12;
+  font-weight: 700;
+}
+
+.hero-desc {
+  max-width: 580px;
+  margin-bottom: 32px;
+  font-size: 19px;
+  color: #5b4a3c;
+  line-height: 1.7;
+}
+
+.hero-call {
+  width: fit-content;
+  min-height: 56px;
+  padding: 0 32px;
+  border-radius: 18px;
+  background: #609127;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(96, 145, 39, 0.25);
+}
+
+.hero-call:hover {
+  background: #507d1d;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(96, 145, 39, 0.35);
+}
+
+.grandma-profile {
+  align-self: center;
+  max-width: 320px;
+  margin-left: auto;
+  padding: 26px;
+  border: 1px solid rgba(226, 206, 167, 0.4);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  box-shadow: 0 16px 36px rgba(72, 48, 28, 0.06);
+}
+
+.grandma-profile img {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #eaf4d2;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.grandma-profile h2 {
+  font-family: 'Gowun Batang', serif;
+  font-size: 26px;
+  color: #3b2c1e;
+  font-weight: 700;
+}
+
+.grandma-profile p {
+  margin-top: 6px;
+  color: #6a5643;
+  font-size: 16px;
+}
+
+/* 5. 아이콘 메뉴 */
+.icon-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px;
+  background: rgba(255, 254, 252, 0.4);
+}
+
+.icon-menu a {
+  min-height: 148px;
+  padding: 24px 16px;
+  border: 1px solid rgba(218, 197, 154, 0.4);
+  border-radius: 28px;
+  background: linear-gradient(180deg, #ffffff 0%, #fffbf2 100%);
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(72, 48, 28, 0.03);
+}
+
+.icon-menu a:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(72, 48, 28, 0.08);
+  border-color: rgba(218, 197, 154, 0.8);
+}
+
+.icon-menu span {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 12px;
+  border-radius: 18px;
+  background: #f1f7e4;
+  font-size: 30px;
+}
+
+.icon-menu strong {
+  display: block;
+  font-family: 'Gowun Batang', serif;
+  font-size: 21px;
+  color: #3c2d1e;
+  font-weight: 700;
+}
+
+.icon-menu small {
+  display: block;
+  margin-top: 4px;
+  color: #8c7660;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 6. 메인 레이아웃 */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 30px;
+  padding: 0 40px 50px;
+}
+
+main, aside {
+  display: grid;
+  gap: 30px;
+  align-content: start;
+}
+
+/* 글래스모피즘 상자 (카드 형식) */
+.section-card, .aside-card {
+  padding: 34px;
+  border: 1px solid rgba(226, 212, 187, 0.4);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(72, 48, 28, 0.03);
+}
+
+.section-title {
+  margin-bottom: 26px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(239, 228, 206, 0.6);
+}
+
+.section-title p {
+  color: #609127;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.section-title h2 {
+  font-family: 'Gowun Batang', serif;
+  font-size: 32px;
+  color: #332415;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+/* 7. 상품 및 체험 카드 디자인 (글래스모피즘 반영) */
+.product-grid, .experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.product-card, .experience-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(226, 214, 191, 0.4);
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(72, 48, 28, 0.02);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.product-card:hover, .experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(72, 48, 28, 0.08);
+  border-color: rgba(96, 145, 39, 0.3);
+}
+
+.product-card img, .experience-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover img, .experience-card:hover img {
+  transform: scale(1.04);
+}
+
+.product-card div, .experience-card div {
+  padding: 22px;
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tag.direct {
+  background: #eef7de;
+  color: #4b7320;
+}
+
+.tag.friend {
+  background: #e2effd;
+  color: #204b78;
+}
+
+.product-card h3, .experience-card h3 {
+  font-family: 'Gowun Batang', serif;
+  margin-bottom: 8px;
+  font-size: 23px;
+  color: #3b2c1e;
+  font-weight: 700;
+}
+
+.product-card p, .experience-card p {
+  color: #6a5746;
+  font-size: 15px;
+  line-height: 1.5;
+  height: 45px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.product-card strong, .experience-card strong {
+  display: block;
+  margin-top: 14px;
+  color: #609127;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/* 품절 오버레이 효과 */
+.product-card.out-of-stock {
+  opacity: 0.85;
+}
+
+.out-of-stock-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(2px);
+  z-index: 10;
+  display: grid;
+  place-items: center;
+}
+
+.out-of-stock-overlay span {
+  padding: 10px 24px;
+  background: rgba(182, 58, 47, 0.9);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(182, 58, 47, 0.3);
+}
+
+/* 8. 사이드바 요소 */
+.aside-card h2 {
+  font-family: 'Gowun Batang', serif;
+  margin-bottom: 18px;
+  font-size: 24px;
+  color: #332415;
+  font-weight: 700;
+}
+
+.step-list {
+  display: grid;
+  gap: 14px;
+  list-style: none;
+}
+
+.step-list li {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 248, 232, 0.5);
+  border: 1px solid rgba(226, 212, 187, 0.2);
+}
+
+.step-list b {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 16px;
+  color: #3b2c1e;
+  font-weight: 700;
+}
+
+.step-list span, .aside-card p {
+  color: #6a5746;
+  font-size: 15px;
+}
+
+.address {
+  margin-bottom: 12px;
+  color: #271c12 !important;
+  font-weight: 700;
+}
+
+/* 프리미엄 지도 컨테이너 */
+.map-container {
+  margin-top: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.map-box {
+  height: 180px;
+  position: relative;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 248, 232, 0.9) 0%, rgba(244, 235, 215, 0.8) 100%),
+              url("https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=700&q=80") center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.map-pin {
+  font-size: 32px;
+  z-index: 2;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.map-pin-pulse {
+  position: absolute;
+  width: 24px;
+  height: 8px;
+  background: rgba(79, 59, 37, 0.2);
+  border-radius: 50%;
+  bottom: 66px;
+  z-index: 1;
+}
+
+.map-label {
+  margin-top: 6px;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #332415;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: 'Gowun Batang', serif;
+}
+
+.map-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.map-actions #copyAddressBtn {
+  grid-column: 1 / -1;
+}
+
+.map-btn {
+  min-height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(215, 196, 159, 0.5);
+  background: #ffffff;
+  color: #5d4630;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.map-btn:hover {
+  background: #fffaf0;
+  transform: translateY(-1px);
+}
+
+.map-btn.naver-btn {
+  background: #03c75a;
+  color: white;
+  border-color: #03c75a;
+}
+
+.map-btn.naver-btn:hover {
+  background: #02b14f;
+}
+
+.map-btn.kakao-btn {
+  background: #fee500;
+  color: #191919;
+  border-color: #fee500;
+}
+
+.map-btn.kakao-btn:hover {
+  background: #eac500;
+}
+
+/* 연락 문의 구역 */
+.mini-contact a {
+  display: flex;
+  margin-top: 14px;
+  height: 52px;
+  border-radius: 16px;
+  background: #609127;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(96, 145, 39, 0.2);
+}
+
+.mini-contact a:hover {
+  background: #507d1d;
+  transform: translateY(-2px);
+}
+
+/* 9. 푸터 */
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 40px;
+  border-top: 1px solid rgba(226, 212, 187, 0.4);
+  background: #f3ebdb;
+  color: #554435;
+  font-size: 15px;
+}
+
+footer strong {
+  display: block;
+  font-family: 'Gowun Batang', serif;
+  color: #3b2c1e;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+footer a:hover {
+  color: #609127;
+}
+
+/* 10. 모바일 고정 하단 통화 (모바일 뷰 전용) */
+.mobile-call {
+  display: none;
+}
+
+/* 11. 관리자 전용 스타일 */
+.admin-body {
+  background: #f7ede2;
+}
+
+.admin-page {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.admin-header, .admin-login, .admin-panel {
+  border: 1px solid rgba(214, 192, 150, 0.5);
+  border-radius: 32px;
+  background: #ffffff;
+  box-shadow: 0 10px 40px rgba(72, 48, 28, 0.04);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+  padding: 30px;
+}
+
+.admin-header h1 {
+  font-family: 'Gowun Batang', serif;
+  font-size: 30px;
+  color: #332415;
+  font-weight: 700;
+}
+
+.admin-header p, .admin-login p, .admin-note {
+  color: #7a6855;
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.admin-header a {
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: #4f3b25;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.admin-header a:hover {
+  background: #3c2d1d;
+  transform: translateY(-1px);
+}
+
+/* 관리자 로그인 */
+.admin-login {
+  margin-bottom: 24px;
+  padding: 34px;
+}
+
+.admin-login h2, .admin-section h2 {
+  font-family: 'Gowun Batang', serif;
+  font-size: 26px;
+  color: #332415;
+  font-weight: 700;
+}
+
+.login-row {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+input, textarea, select {
+  min-height: 48px;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(214, 197, 165, 0.7);
+  border-radius: 12px;
+  background: #fffcf8;
+  font-size: 15px;
+  color: #3e3227;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #609127;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(96, 145, 39, 0.1);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.login-row button, .save-btn, .admin-status button, .danger-btn {
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.login-row button, .save-btn {
+  background: #609127;
+}
+
+.login-row button:hover, .save-btn:hover {
+  background: #507d1d;
+  box-shadow: 0 4px 12px rgba(96, 145, 39, 0.2);
+}
+
+/* 관리자 패널 */
+.admin-panel {
+  padding: 34px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.admin-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(226, 212, 187, 0.4);
+}
+
+.admin-status strong {
+  font-size: 19px;
+  color: #332415;
+}
+
+.admin-status button {
+  min-height: 40px;
+  padding: 0 18px;
+  background: #4f3b25;
+}
+
+.admin-status button:hover {
+  background: #3c2d1d;
+}
+
+/* 관리자 탭 */
+.admin-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin: 24px 0;
+}
+
+.tab-btn {
+  min-height: 48px;
+  border: 1px solid rgba(210, 193, 160, 0.5);
+  border-radius: 12px;
+  background: rgba(255, 248, 232, 0.5);
+  color: #5d4630;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.tab-btn:hover {
+  background: #fff3d6;
+}
+
+.tab-btn.active {
+  background: #609127;
+  border-color: #609127;
+  color: white;
+  box-shadow: 0 4px 12px rgba(96, 145, 39, 0.15);
+}
+
+.admin-section {
+  display: none;
+  padding: 26px;
+  border: 1px solid rgba(226, 212, 187, 0.4);
+  border-radius: 24px;
+  background: #ffffff;
+}
+
+.admin-section.active {
+  display: block;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.form-grid label {
+  display: grid;
+  gap: 6px;
+  color: #3b2c1e;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.form-grid .full {
+  grid-column: 1 / -1;
+}
+
+.checkbox-label {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  min-height: auto;
+  accent-color: #609127;
+}
+
+.checkbox-wrapper span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.save-btn, .danger-btn {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 20px;
+}
+
+.danger-btn {
+  background: #b63a2f;
+}
+
+.danger-btn:hover {
+  background: #9d3127;
+  box-shadow: 0 4px 12px rgba(182, 58, 47, 0.2);
+}
+
+/* 파일 업로드 드래그존 느낌의 Custom File UI */
+.image-field {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.field-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #3b2c1e;
+}
+
+.file-button {
+  min-height: 48px;
+  border-radius: 12px;
+  background: #4f3b25;
+  color: white;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.file-button:hover {
+  background: #3c2d1d;
+}
+
+.file-button input {
+  display: none;
+}
+
+.preview-img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px dashed rgba(226, 212, 187, 0.8);
+  background: #fffcf8;
+  margin-top: 8px;
+}
+
+/* 관리자 아이템 리스트 */
+.admin-list, .schedule-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+  border-top: 1px solid rgba(226, 212, 187, 0.4);
+  padding-top: 24px;
+}
+
+.admin-item, .schedule-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid rgba(226, 212, 187, 0.3);
+  border-radius: 18px;
+  background: #fffdf8;
+}
+
+.admin-item.item-out-of-stock {
+  background: #fbfbfb;
+  border-color: rgba(226, 212, 187, 0.15);
+}
+
+.admin-item strong, .schedule-item strong {
+  display: block;
+  font-size: 17px;
+  color: #3b2c1e;
+}
+
+.admin-item span, .schedule-item span {
+  display: block;
+  color: #7a6855;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.admin-out-badge {
+  padding: 2px 6px;
+  background: #b63a2f;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.item-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.small-btn {
+  min-height: 36px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 10px;
+  background: #6f5a3a;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.small-btn:hover {
+  background: #5d4b30;
+}
+
+.small-btn.delete {
+  background: #b63a2f;
+}
+
+.small-btn.delete:hover {
+  background: #9d3127;
+}
+
+.small-btn.toggle-stock-btn {
+  background: #609127;
+}
+
+.small-btn.toggle-stock-btn:hover {
+  background: #507d1d;
+}
+
+.admin-thumb {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(226, 212, 187, 0.4);
+}
+
+/* 12. 감성적인 커스텀 토스트 알림창 스타일 */
+.custom-toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 30px);
+  z-index: 10000;
+  background: rgba(60, 45, 30, 0.95);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 16px 28px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+}
+
+.custom-toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.custom-toast.error {
+  background: rgba(182, 58, 47, 0.95);
+}
+
+.toast-icon {
+  font-size: 18px;
+}
+
+/* Keyframes */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ==========================================================================
+   13. 반응형 웹 (미디어 쿼리)
+   ========================================================================== */
+
+@media (max-width: 960px) {
+  .page {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+  }
+  
+  .top-header, .admin-header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px;
+  }
+  
+  .header-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 14px;
+  }
+  
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px 24px;
+    text-align: center;
+  }
+  
+  .hero-label {
+    margin: 0 auto 16px;
+  }
+  
+  .hero-call {
+    margin: 0 auto;
+  }
+  
+  .grandma-profile {
+    margin: 20px auto 0;
+  }
+  
+  .icon-menu {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 24px;
+  }
+  
+  .main-layout {
+    grid-template-columns: 1fr;
+    padding: 0 24px 40px;
+    gap: 30px;
+  }
+  
+  .admin-tabs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-bottom: 76px; /* 모바일 하단 전화 버튼용 여백 */
+  }
+
+  .top-header {
+    padding: 20px 16px;
+  }
+  
+  .logo-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    font-size: 24px;
+  }
+  
+  .logo strong {
+    font-size: 28px;
+  }
+  
+  .logo em {
+    font-size: 13px;
+  }
+  
+  .header-actions {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-button, .call-button {
+    min-height: 48px;
+    font-size: 15px;
+  }
+  
+  .hero h1 {
+    font-size: 32px;
+  }
+  
+  .hero-desc {
+    font-size: 16px;
+  }
+  
+  .icon-menu {
+    gap: 12px;
+    padding: 16px;
+  }
+  
+  .icon-menu a {
+    min-height: 124px;
+    padding: 16px 8px;
+    border-radius: 20px;
+  }
+  
+  .icon-menu span {
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+    border-radius: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .icon-menu strong {
+    font-size: 17px;
+  }
+  
+  .icon-menu small {
+    font-size: 12px;
+  }
+  
+  .main-layout {
+    padding: 0 16px 30px;
+  }
+  
+  .section-card, .aside-card {
+    padding: 22px;
+    border-radius: 24px;
+  }
+  
+  .section-title h2 {
+    font-size: 25px;
+  }
+  
+  /* 모바일 상품 카드 가로 배치 형태로 전환 (터치성 극대화) */
+  .product-grid, .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .product-card, .experience-card {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+  }
+  
+  .product-card img, .experience-card img {
+    height: 100%;
+    min-height: 150px;
+  }
+  
+  .product-card div, .experience-card div {
+    padding: 16px;
+  }
+  
+  .product-card h3, .experience-card h3 {
+    font-size: 19px;
+  }
+  
+  .product-card p, .experience-card p {
+    font-size: 14px;
+    height: 40px;
+  }
+  
+  .product-card strong, .experience-card strong {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+  
+  footer {
+    flex-direction: column;
+    padding: 24px 16px;
+    font-size: 14px;
+  }
+  
+  /* 모바일 하단 고정 전화 버튼 활성화 */
+  .mobile-call {
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 16px;
+    background: rgba(255, 254, 252, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(226, 212, 187, 0.4);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .mobile-call a {
+    display: flex;
+    height: 52px;
+    border-radius: 16px;
+    background: #609127;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(96, 145, 39, 0.25);
+  }
+  
+  /* 관리자 반응형 */
+  .admin-page {
+    padding: 10px;
+    margin: 10px auto;
+  }
+  
+  .admin-header, .admin-login, .admin-panel {
+    padding: 20px;
+    border-radius: 24px;
+  }
+  
+  .admin-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .login-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-item, .schedule-item {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* ==========================================================================
+   백엔드 없는 완성형 추가 수정
+   ========================================================================== */
+
+.hidden-admin-link {
+  align-self: end;
+  color: #8d7a61;
+  font-size: 13px;
+  opacity: 0.55;
+}
+
+.hidden-admin-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.tap-guide {
+  color: #6b5a49;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.status-badge {
+  display: inline-block;
+  margin: 0 0 9px 6px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.status-badge.open {
+  background: #eaf4d2;
+  color: #4f7424;
+}
+
+.status-badge.limited {
+  background: #fff1c7;
+  color: #8a5a00;
+}
+
+.status-badge.closed {
+  background: #ffe1dc;
+  color: #9d3028;
+}
+
+
+.file-button {
+  min-height: 52px;
+  padding: 0 16px;
+  border-radius: 14px;
+  background: #4f3c25;
+  color: white !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  text-align: center;
+  cursor: pointer;
+}
+
+.file-button input {
+  display: none;
+}
+
+
+.preview-img {
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 2px solid #e2d4bb;
+  background: #fff8e8;
+}
+
+.image-field {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+.field-title {
+  font-size: 17px;
+  font-weight: 900;
+  color: #4b3a28;
+}
+
+.admin-thumb {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid #e2d4bb;
+}
+
+.admin-item {
+  grid-template-columns: 76px 1fr auto;
+}
+
+
+.schedule-calendar {
+  margin: 16px 0 18px;
+  padding: 16px;
+  border: 1px solid #e2d4bb;
+  border-radius: 18px;
+  background: #fffaf0;
+}
+
+.calendar-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-head {
+  margin-bottom: 6px;
+  color: #6b5a49;
+  font-weight: 900;
+  text-align: center;
+}
+
+.calendar-cell {
+  min-height: 54px;
+  padding: 7px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #eadcc3;
+}
+
+.calendar-cell b {
+  display: block;
+}
+
+.calendar-cell small {
+  display: inline-block;
+  margin-top: 2px;
+  color: #5f8f25;
+  font-weight: 900;
+}
+
+.calendar-cell.today {
+  outline: 2px solid #5f8f25;
+}
+
+.calendar-cell.has-schedule {
+  background: #edf7d6;
+}
+
+.calendar-cell.empty {
+  background: transparent;
+  border: none;
+}
+
+@media (max-width: 560px) {
+  .hidden-admin-link {
+    display: none;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+  }
+
+  .admin-item {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-thumb {
+    width: 100%;
+    height: 150px;
+  }
+
+  .calendar-cell {
+    min-height: 44px;
+    padding: 5px;
+    font-size: 13px;
+  }
+
+  .calendar-cell small {
+    font-size: 11px;
+  }
+}
+
+
+/* ==========================================================================
+   v2 수정: 관리자 진입 링크, 캘린더 일정 구분, 백업 설명용 UI
+   ========================================================================== */
+
+.footer-admin-link {
+  align-self: end;
+  min-height: 38px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(111, 90, 58, 0.25);
+  background: rgba(255, 248, 232, 0.55);
+  color: #6f5a3a;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.footer-admin-link:hover {
+  background: #fff3d6;
+  color: #3c2a1e;
+}
+
+.hidden-admin-link {
+  display: none;
+}
+
+.calendar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 10px;
+}
+
+.legend-dot,
+.calendar-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: white;
+  font-weight: 900;
+}
+
+.legend-dot {
+  min-height: 28px;
+  padding: 4px 9px;
+  font-size: 13px;
+}
+
+.calendar-pill {
+  margin-top: 4px;
+  padding: 2px 6px;
+  font-size: 11px;
+}
+
+.type-product {
+  background: #5f8f25 !important;
+}
+
+.type-experience {
+  background: #b97924 !important;
+}
+
+.type-visit {
+  background: #2f6f9f !important;
+}
+
+.type-memo {
+  background: #7b668f !important;
+}
+
+.calendar-cell {
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  font-family: inherit;
+}
+
+.calendar-cell.empty {
+  cursor: default;
+}
+
+.calendar-cell.has-schedule {
+  border-color: #cdb78d;
+}
+
+.calendar-cell.has-schedule:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(72, 48, 28, 0.12);
+}
+
+.calendar-day-detail {
+  margin: 12px 0 18px;
+  padding: 15px;
+  border-radius: 16px;
+  border: 1px solid #e2d4bb;
+  background: #fffdf8;
+  color: #4b3a28;
+  font-size: 16px;
+}
+
+.calendar-day-detail > strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.detail-schedule-row {
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  color: white;
+}
+
+.detail-schedule-row span {
+  display: block;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.detail-schedule-row p {
+  margin-top: 2px;
+  color: white;
+}
+
+@media (max-width: 560px) {
+  .footer-admin-link {
+    align-self: flex-start;
+  }
+
+  .calendar-pill {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+}
+
+
+/* ==========================================================================
+   v3 수정: 지도/백업 제거, 찾아오는 길 실사용 정보로 정리
+   ========================================================================== */
+
+.map-box,
+.map-button {
+  display: none !important;
+}
+
+.visit-info {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.visit-info div {
+  padding: 14px;
+  border-radius: 16px;
+  background: #fff8e8;
+  border: 1px solid #eadcc3;
+}
+
+.visit-info strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #3c2a1e;
+  font-size: 17px;
+}
+
+.visit-info span {
+  display: block;
+  color: #5a4b3d;
+  font-size: 16px;
+}
+
+
+/* ==========================================================================
+   v4 수정: 상품/체험 정보 수정 기능
+   ========================================================================== */
+
+.plain-cancel-btn {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 10px;
+  border: 2px solid #d2c1a0;
+  border-radius: 14px;
+  background: #fff8e8;
+  color: #4b3a28;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.plain-cancel-btn:hover {
+  background: #fff3d6;
+}
+
+.item-actions .small-btn {
+  white-space: nowrap;
+}
+
+
+/* ==========================================================================
+   v5 수정: 모바일 관리자 로그인 버튼 높이 확대
+   ========================================================================== */
+
+.admin-login .login-row input,
+.admin-login .login-row button {
+  min-height: 60px;
+}
+
+.admin-login .login-row button {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+@media (max-width: 560px) {
+  .admin-login {
+    padding: 22px;
+  }
+
+  .admin-login .login-row {
+    gap: 14px;
+  }
+
+  .admin-login .login-row input {
+    min-height: 62px;
+    font-size: 18px;
+  }
+
+  .admin-login .login-row button {
+    min-height: 66px;
+    width: 100%;
+    font-size: 21px;
+    border-radius: 16px;
+  }
+}
+
+
+/* ==========================================================================
+   Firebase 실시간 버전 추가 스타일
+   ========================================================================== */
+
+.firebase-guide code {
+  padding: 3px 7px;
+  border-radius: 8px;
+  background: #fff3d6;
+  font-weight: 900;
+}
+
+.firebase-login-row {
+  grid-template-columns: 1fr 1fr 150px;
+}
+
+.loading-text,
+.empty-text {
+  padding: 18px;
+  border-radius: 18px;
+  background: #fff8e8;
+  color: #6b5a49;
+  font-weight: 800;
+}
+
+.error-box {
+  padding: 16px;
+  border-radius: 18px;
+  background: #ffe1dc;
+  color: #9d3028;
+  font-weight: 900;
+}
+
+@media (max-width: 760px) {
+  .firebase-login-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==========================================================================
+   v2 수정: 관리자 진입 숨김 처리 및 프로필 문구 안정화
+   ========================================================================== */
+
+/* 관리자 페이지는 주소창에서 /admin.html 직접 입력으로 접근합니다. */
+.footer-admin-link,
+.hidden-admin-link,
+.admin-button {
+  display: none !important;
+}
+
+.grandma-profile #profileQuote {
+  margin-top: 6px;
+  color: #5e4e3f;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+
+/* ==========================================================================
+   Firebase 익명 로그인 + 관리자 번호 방식
+   ========================================================================== */
+
+.pin-login-row {
+  grid-template-columns: 1fr 150px;
+}
+
+#adminPin {
+  text-align: center;
+  letter-spacing: 8px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+@media (max-width: 760px) {
+  .pin-login-row {
+    grid-template-columns: 1fr;
+  }
+
+  #adminPin {
+    min-height: 66px;
+    font-size: 26px;
+  }
+
+  .pin-login-row button {
+    min-height: 68px;
+    font-size: 22px;
+  }
+}
+
+
+/* ==========================================================================
+   Firestore 전용 버전: 이미지 업로드 제거, 대표 이미지 선택 방식
+   ========================================================================== */
+
+.firebase-guide p::after {
+  content: "  Storage 없이 Firestore만 사용합니다.";
+  font-weight: 900;
+  color: #5f8f25;
+}

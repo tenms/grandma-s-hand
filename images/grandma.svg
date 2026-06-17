@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff4d1"/>
+      <stop offset="100%" stop-color="#dcefbf"/>
+    </linearGradient>
+    <linearGradient id="clothes" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6f8f3d"/>
+      <stop offset="100%" stop-color="#3f6f2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="900" fill="url(#bg)"/>
+  <circle cx="450" cy="340" r="230" fill="#f0f0e8"/>
+  <circle cx="450" cy="390" r="185" fill="#f7cfae"/>
+  <path d="M245 390c10-145 93-240 205-240s195 95 205 240c-75-55-150-78-205-78s-130 23-205 78z" fill="#e9e9dd"/>
+  <circle cx="375" cy="390" r="18" fill="#3b2d25"/>
+  <circle cx="525" cy="390" r="18" fill="#3b2d25"/>
+  <path d="M405 475c30 28 60 28 90 0" fill="none" stroke="#8a5140" stroke-width="14" stroke-linecap="round"/>
+  <path d="M285 810c30-150 95-245 165-245s135 95 165 245z" fill="url(#clothes)"/>
+  <path d="M355 600c45 55 145 55 190 0" fill="#fff8e8"/>
+  <circle cx="270" cy="430" r="42" fill="#f7cfae"/>
+  <circle cx="630" cy="430" r="42" fill="#f7cfae"/>
+  <text x="450" y="835" text-anchor="middle" font-family="serif" font-size="64" font-weight="700" fill="#4f3c25">할머니손</text>
+</svg>
